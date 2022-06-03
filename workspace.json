@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "example-lib": "libs/example-lib",
     "plugin-hello-world": "libs/plugin-hello-world",
     "plugin-hello-world-e2e": "apps/plugin-hello-world-e2e"
   }

@@ -4,6 +4,12 @@
   "title": "Build executor",
   "description": "",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Who to say hello to",
+      "default": "World"
+    }
+  },
   "required": []
 }

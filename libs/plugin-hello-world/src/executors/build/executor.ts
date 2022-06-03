@@ -4,8 +4,8 @@ import { BuildExecutorSchema } from './schema';
 
 export default async function runExecutor(options: BuildExecutorSchema) {
   logger.debug('NX Plugin Hello World', options);
-  
-  logger.warn('Hello World!');
+
+  logger.warn(`Hello, ${options.name}!`);
 
   return {
     success: true,

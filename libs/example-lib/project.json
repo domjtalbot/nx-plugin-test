@@ -5,7 +5,9 @@
   "targets": {
     "hello-build": {
       "executor": "@domjtalbot/nx-hello-world:build",
-      "options": {}
+      "options": {
+        "name": "Dom"
+      }
     },
     "build": {
       "executor": "@nrwl/js:tsc",

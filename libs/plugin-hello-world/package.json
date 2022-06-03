@@ -9,5 +9,10 @@
   "builders": "./executors.json",
   "dependencies": {
     "@nrwl/devkit": "^14.1.9"
+  },
+  "repository": {
+    "directory": "libs/plugin-hello-world",
+    "type": "git",
+    "url": "git://github.com/domjtalbot/nx-plugin-test.git"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "plugin-hello-world",
+  "version": "0.0.1",
+  "generators": {
+    "plugin-hello-world": {
+      "factory": "./src/generators/plugin-hello-world/generator",
+      "schema": "./src/generators/plugin-hello-world/schema.json",
+      "description": "plugin-hello-world generator"
+    }
+  }
+}

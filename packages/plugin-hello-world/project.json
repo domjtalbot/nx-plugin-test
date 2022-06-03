@@ -1,0 +1,55 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/plugin-hello-world/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/plugin-hello-world",
+        "main": "packages/plugin-hello-world/src/index.ts",
+        "tsConfig": "packages/plugin-hello-world/tsconfig.lib.json",
+        "assets": [
+          "packages/plugin-hello-world/*.md",
+          {
+            "input": "./packages/plugin-hello-world/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/plugin-hello-world/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/plugin-hello-world",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/plugin-hello-world",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/plugin-hello-world/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/plugin-hello-world"],
+      "options": {
+        "jestConfig": "packages/plugin-hello-world/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["type:nx-plugin"]
+}

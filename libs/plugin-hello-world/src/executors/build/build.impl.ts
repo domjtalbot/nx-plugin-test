@@ -2,7 +2,7 @@ import { logger } from '@nrwl/devkit';
 
 import { BuildExecutorSchema } from './schema';
 
-export default async function runExecutor(options: BuildExecutorSchema) {
+export async function buildExecutor(options: BuildExecutorSchema) {
   logger.debug('NX Plugin Hello World', options);
 
   logger.warn(`Hello, ${options.name}!`);
@@ -11,3 +11,5 @@ export default async function runExecutor(options: BuildExecutorSchema) {
     success: true,
   };
 }
+
+export default buildExecutor;

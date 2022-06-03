@@ -1,7 +1,10 @@
-import { BuildExecutorSchema } from './schema';
-import executor from './executor';
+import type { BuildExecutorSchema } from './schema';
 
-const options: BuildExecutorSchema = {};
+import executor from './build.impl';
+
+const options: BuildExecutorSchema = {
+  name: 'test'
+};
 
 describe('Build Executor', () => {
   it('can run', async () => {

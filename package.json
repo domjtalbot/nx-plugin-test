@@ -5,7 +5,8 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@nrwl/devkit": "^14.1.9"
+    "@nrwl/devkit": "^14.1.9",
+    "@nrwl/nx-plugin": "^14.1.9"
   },
   "devDependencies": {
     "@nrwl/cli": "14.1.9",

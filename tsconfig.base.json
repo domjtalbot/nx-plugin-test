@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@domjtalbot/nx-hello-world": ["packages/plugin-hello-world/src/index.ts"]
+      "@domjtalbot/nx-hello-world": ["libs/plugin-hello-world/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

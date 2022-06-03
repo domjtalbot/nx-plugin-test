@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "plugin-hello-world": "packages/plugin-hello-world",
-    "plugin-hello-world-e2e": "packages/plugin-hello-world-e2e"
+    "plugin-hello-world": "libs/plugin-hello-world",
+    "plugin-hello-world-e2e": "apps/plugin-hello-world-e2e"
   }
 }

@@ -16,7 +16,7 @@ describe('plugin-hello-world e2e', () => {
   beforeAll(() => {
     ensureNxProject(
       '@domjtalbot/nx-hello-world',
-      'dist/packages/plugin-hello-world'
+      'dist/libs/plugin-hello-world'
     );
   });
 
@@ -52,7 +52,7 @@ describe('plugin-hello-world e2e', () => {
       const projectName = uniq('plugin-hello-world');
       ensureNxProject(
         '@domjtalbot/nx-hello-world',
-        'dist/packages/plugin-hello-world'
+        'dist/libs/plugin-hello-world'
       );
       await runNxCommandAsync(
         `generate @domjtalbot/nx-hello-world:plugin-hello-world ${projectName} --tags e2etag,e2ePackage`

@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'plugin-hello-world',
+  displayName: 'plugin-hello-world-e2e',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/plugin-hello-world',
+  coverageDirectory: '../../coverage/apps/plugin-hello-world-e2e',
 };

@@ -2,8 +2,14 @@
   "name": "nxp",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
   "private": true,
+  "scripts": {
+    "ci": "npm run build; npm run e2e; npm run lint; npm run test",
+    "build": "nx run-many --target=build --all",
+    "e2e": "nx run-many --target=e2e --all",
+    "lint": "nx run-many --target=lint --all",
+    "test": "nx run-many --target=test --all"
+  },
   "dependencies": {
     "@nrwl/devkit": "^14.1.9",
     "@nrwl/nx-plugin": "^14.1.9",

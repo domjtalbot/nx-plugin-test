@@ -3,6 +3,10 @@
   "sourceRoot": "libs/example-lib/src",
   "projectType": "library",
   "targets": {
+    "hello-build": {
+      "executor": "@domjtalbot/nx-hello-world:build",
+      "options": {}
+    },
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],

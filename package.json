@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "ci": "npm run build; npm run e2e; npm run lint; npm run test",
+    "ci": "npm run build; npm run e2e; npm run lint; npm run test; npm run test-plugin",
     "build": "nx run-many --target=build --all",
     "e2e": "nx run-many --target=e2e --all",
     "lint": "nx run-many --target=lint --all",

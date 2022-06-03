@@ -1,0 +1,36 @@
+name: Build publish
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_publish:
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout repo
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Setup Node with NPM caching
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+
+    # Run build and tests
+    - name: Build & Tests
+      run: npm run ci
+
+    # Set GitHub packages registry
+    - uses: actions/setup-node@v3
+      with:
+        registry-url: 'https://npm.pkg.github.com'
+
+    # Publish to Github packages
+    - name: Publish
+      run: npm publish ./dist/libs/plugin-hello-world
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
